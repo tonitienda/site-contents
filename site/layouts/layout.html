@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/litera/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="/static/styles.css" rel="stylesheet" />
+
+    <style>
+      pre {
+        border: 2px solid #ddd;
+        border-radius: 12px;
+        box-shadow: #eee 0px 0px 10px;
+        padding: 18px;
+      }
+    </style>
+    <title>{{ .Title }}</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h2>
+          <a color="inherit" href="/">tsoobame</a>
+        </h2>
+        <div class="navbar-links">
+          {{range $section := .Sections }}
+          <button
+            tabindex="0"
+            type="button"
+            {{
+            if
+            eq
+            $section
+            $.Section
+            }}class="active"
+            {{
+            end
+            }}
+          >
+            <a href="/{{$section}}" color="inherit">{{$section}}</a>
+          </button>
+          {{ end}}
+        </div>
+      </div>
+    </header>
+
+    <div class="container mt-3 pt-1">{{ .HTML }}</div>
+
+    <footer>
+      <div>
+        <p>&copy; 2025 tsoobame. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
