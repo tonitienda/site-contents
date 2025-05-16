@@ -92,3 +92,13 @@ sections:
           hero-image-url: "gengo.jpg"
           hero-image-author: "Bank Phrom"
           hero-image-author-url: "https://unsplash.com/@bank_phrom?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+
+      - title: Aidia Hub
+        description: "Aidia Hub is a collaboration platform to share ideas and projects"
+        markdown-path: site/projects/aidiahub.md
+        published-at: 2024-08-16
+        tags: ["ideas", "saas", "ai"]
+        metadata:
+          hero-image-url: nasa-Q1p7bh3SHj8-unsplash_jszggn.jpg
+          hero-image-author: "NASA"
+          hero-image-author-url: "https://unsplash.com/@nasa?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"

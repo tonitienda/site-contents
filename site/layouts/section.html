@@ -1,47 +1,3 @@
-<!-- <div class="row row-cols-1 row-cols-md-3 g-4">
-  {{range $page := .Pages}}
-  <div class="col">
-    <div class="card">
-      <img
-      src="https://res.cloudinary.com/ddkok43g3/image/upload/w_600,f_auto,q_auto/v1747320153/{{index
-      $page.Metadata "hero-image-url"}}" class="card-img-top object-fit-cover"
-      alt="{{ $page.Title }}" style="height: 140px; object-fit: cover" />
-
-      <div class="card-body">
-        <small class="text-muted d-block mb-2">
-          <a
-            href="{{index
-              $page.Metadata "hero-image-author-url"}}"
-            target="_blank"
-            rel="noreferrer"
-            class="text-muted text-decoration-none"
-          >
-            Photo by {{index
-              $page.Metadata "hero-image-author"}}
-          </a>
-        </small>
-
-        <h5 class="card-title mb-0">
-          <a href="/{{$.Section}}/{{$page.OutFileName}}">{{$page.Title }}</a>
-        </h5>
-        <p class="text-muted mb-2">{{$page.PublishedAt }}</p>
-
-        <p class="card-text">{{$page.Description }}</p>
-
-        <div class="mb-3">
-          {{ range $tag :=$page.Tags}}
-          <a
-            href="/{{$.Section}}/tags/{{ $tag }}.html"
-            class="badge bg-light text-dark border me-1"
-            >{{ $tag }}</a
-          >
-          {{ end }}
-        </div>
-      </div>
-    </div>
-  </div>
-  {{end}}
-</div> -->
 <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
   {{ range $i, $page := .Pages }} {{ $isMain := eq $i 0 }}
 
@@ -49,7 +5,7 @@
     class="{{ if $isMain }}md:col-span-2 {{ end }} bg-white rounded-lg shadow overflow-hidden hover:scale-105 transition"
   >
     <img
-    src="https://res.cloudinary.com/ddkok43g3/image/upload/w_600,f_auto,q_auto/v1747320153/{{index
+    src="https://res.cloudinary.com/ddkok43g3/image/upload/w_600,f_auto,q_auto/{{index
     $page.Metadata "hero-image-url"}}" alt="{{ $page.Title }}" class="w-full
     h-48 object-cover">
     <!-- Author Credit -->
