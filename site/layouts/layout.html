@@ -21,9 +21,10 @@
   <body>
     <header>
       <div>
-        <h2>
+        <!-- TODO - See why text wrapps up-->
+        <h2 style="width: 12rem; text-align: left">
           <!-- We do not have a proper Home page yet, so we point to blog -->
-          <a color="inherit" href="/blog">tsoobame</a>
+          <a color="inherit" href="/blog">{{.Title}}</a>
         </h2>
         <div class="navbar-links">
           {{range $section := .Sections }}
@@ -51,7 +52,7 @@
 
     <footer>
       <div>
-        <p>&copy; 2025 tsoobame. All rights reserved.</p>
+        <p>&copy; 2025 {{.Title}}. All rights reserved.</p>
       </div>
     </footer>
   </body>

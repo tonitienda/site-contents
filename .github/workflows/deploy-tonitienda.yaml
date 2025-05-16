@@ -1,4 +1,4 @@
-name: deploy tsoobame
+name: deploy tonitienda
 on:
   workflow_dispatch:
   push:
@@ -21,7 +21,9 @@ jobs:
         with:
           fetch-depth: 0
         # Use the latest version of gengo
+        # Trick to change the title of the site until a better solution is supported
       - run: |
+          sed -i 's/tsoobame/toni tienda/g' gengo.yaml 
           curl -fsSL https://raw.githubusercontent.com/saasuke-labs/gengo/main/install/install.sh | bash
           gengo generate --manifest gengo.yaml --output dist --plain
         # There is no proper home page, so for now we just copy the "blog" index as the home page

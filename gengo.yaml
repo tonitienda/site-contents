@@ -1,4 +1,4 @@
-title: Tsoobame
+title: tsoobame
 default-layout-template: "site/layouts/layout.html"
 default-page-template: "site/layouts/page.html"
 default-section-template: "site/layouts/section.html"
