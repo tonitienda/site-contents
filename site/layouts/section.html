@@ -1,4 +1,4 @@
-<div class="row row-cols-1 row-cols-md-3 g-4">
+<!-- <div class="row row-cols-1 row-cols-md-3 g-4">
   {{range $page := .Pages}}
   <div class="col">
     <div class="card">
@@ -41,4 +41,47 @@
     </div>
   </div>
   {{end}}
+</div> -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+  {{ range $i, $page := .Pages }} {{ $isMain := eq $i 0 }}
+
+  <div
+    class="{{ if $isMain }}md:col-span-2 {{ end }} bg-white rounded-lg shadow overflow-hidden hover:scale-105 transition"
+  >
+    <img
+    src="https://res.cloudinary.com/ddkok43g3/image/upload/w_600,f_auto,q_auto/v1747320153/{{index
+    $page.Metadata "hero-image-url"}}" alt="{{ $page.Title }}" class="w-full
+    h-48 object-cover">
+    <!-- Author Credit -->
+    <small class="text-gray-500 text-xs pl-2 inline-block">
+      Photo by
+      <a
+        href="{{ index $page.Metadata "hero-image-author-url" }}"
+        class="underline hover:text-[rgb(0,119,151)]"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        "{{ index $page.Metadata "hero-image-author" }}"
+      </a>
+    </small>
+    <div class="p-4">
+      <h2 class="text-xl font-semibold mb-2">
+        <a href="/{{$.Section}}/{{$page.OutFileName}}">{{$page.Title }}</a>
+      </h2>
+      <p
+        class="text-gray-600 mb-2 {{ if $isMain }}text-base{{ else }}text-sm{{ end }}"
+      >
+        {{ $page.Description }}
+      </p>
+      <div class="text-sm text-gray-400 mb-1">{{ $page.PublishedAt }}</div>
+      <div class="flex flex-wrap gap-1">
+        {{ range $tag := $page.Tags }}
+        <span class="tag text-xs font-medium px-2 py-1 rounded"
+          ><a href="/{{$.Section}}/tags/{{ $tag }}.html">{{ $tag }}</a></span
+        >
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
 </div>

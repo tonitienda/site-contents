@@ -1,29 +1,40 @@
-<div class="row">
-  <div class="text-end mb-4">
+<div class="mb-8">
+  <!-- Hero Image -->
+  <div class="mb-4 text-end">
     <img
-    src="https://res.cloudinary.com/ddkok43g3/image/upload/w_auto,h_400,c_fill,g_auto,q_auto,f_auto/v1747320153/{{index .Metadata "hero-image-url"}}" style="width: 100%; height: 400px; object-fit:
-    cover" alt="{{.Title}}" />
-    <div>
-      {{ range $tag := .Tags}}
-      <a
-        href="tags/{{ $tag }}.html"
-        class="badge bg-light text-dark border me-1"
-        >{{ $tag }}</a
-      >
-      {{ end }}
-      <small class="text-muted mt-2">
-        Photo by
+      src="https://res.cloudinary.com/ddkok43g3/image/upload/w_auto,h_400,c_fill,g_auto,q_auto,f_auto/v1747320153/{{ index .Metadata "hero-image-url" }}"
+      alt="{{ .Title }}"
+      class="w-full h-[400px] object-cover rounded"
+    />
+
+    <!-- Tags -->
+    <div class="mt-2">
+      {{ range $tag := .Tags }}
         <a
-          href="{{ index .Metadata "hero-image-author-url"}}"
-          class="text-decoration-none"
-          target="_blank"
-          rel="noopener noreferrer"
-          >"{{ index .Metadata "hero-image-author"}}</a
+          href="tags/{{ $tag }}.html"
+          class="inline-block bg-[rgb(0,119,151)] text-white text-xs font-medium px-2 py-1 rounded me-1"
         >
-      </small>
+          {{ $tag }}
+        </a>
+      {{ end }}
     </div>
+
+    <!-- Author Credit -->
+    <small class="text-gray-500 text-sm mt-2 inline-block">
+      Photo by
+      <a
+        href="{{ index .Metadata "hero-image-author-url" }}"
+        class="underline hover:text-[rgb(0,119,151)]"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        "{{ index .Metadata "hero-image-author" }}"
+      </a>
+    </small>
   </div>
-  <div class="row">
-    <article>{{ .HTML }}</article>
-  </div>
+
+  <!-- Post Content -->
+  <article class="post-content">
+    {{ .HTML }}
+  </article>
 </div>
