@@ -1,6 +1,6 @@
 <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
   {{ range $i, $page := .Pages }} {{ $isMain := eq $i 0 }}
-
+  {{ $laastEditedAt := index $page.Metadata "last-edited-at"}}
   <div
     class="{{ if $isMain }}md:col-span-2 {{ end }} bg-white rounded-lg shadow overflow-hidden hover:scale-105 transition"
   >
@@ -29,7 +29,7 @@
       >
         {{ $page.Description }}
       </p>
-      <div class="text-sm text-gray-400 mb-1">{{ $page.PublishedAt }}</div>
+      <div class="text-sm text-gray-400 mb-1">{{ $page.PublishedAt }} {{ if $laastEditedAt }} Edit: {{ $laastEditedAt }} {{ end }}</div>
       <div class="flex flex-wrap gap-1">
         {{ range $tag := $page.Tags }}
         <span class="tag text-xs font-medium px-2 py-1 rounded"
