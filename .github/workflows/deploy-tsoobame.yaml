@@ -21,8 +21,12 @@ jobs:
         with:
           fetch-depth: 0
         # Use the latest version of gengo
-      - run: |
+      - name: Install gengo
+        run: |
           curl -fsSL https://raw.githubusercontent.com/saasuke-labs/gengo/main/install/install.sh | bash
+          gengo version
+      - name: Generate site
+        run: |
           gengo generate --manifest gengo.yaml --output dist --plain
         # There is no proper home page, so for now we just copy the "blog" index as the home page
       - run: |
