@@ -1,8 +1,13 @@
-generate:
+tsoobame:
     cd ~/Projects/gengo   &&     go run cmd/main.go generate --manifest ~/Projects/blog-down/gengo.yaml --output ~/Projects/blog-down/dist
 
 serve:
     cd ~/Projects/gengo   &&     go run cmd/main.go serve --site ~/Projects/blog-down/dist 
+
+
+tonitienda:
+    cd ~/Projects/gengo   &&     go run cmd/main.go generate --manifest ~/Projects/blog-down/gengo.yaml --manifest ~/Projects/blog-down/gengo.tonitienda.yaml --output ~/Projects/blog-down/dist
+
 
 
 ci:
@@ -11,3 +16,5 @@ ci:
 
     rm dist/index.html
     cp dist/blog/index.html dist/index.html
+
+

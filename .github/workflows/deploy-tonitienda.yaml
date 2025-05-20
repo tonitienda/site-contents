@@ -23,9 +23,8 @@ jobs:
         # Use the latest version of gengo
         # Trick to change the title of the site until a better solution is supported
       - run: |
-          sed -i 's/tsoobame/toni tienda/g' gengo.yaml 
           curl -fsSL https://raw.githubusercontent.com/saasuke-labs/gengo/main/install/install.sh | bash
-          gengo generate --manifest gengo.yaml --output dist --plain
+          gengo generate --manifest gengo.yaml --manifest gengo.tonitienda.yaml --output dist --plain
         # There is no proper home page, so for now we just copy the "blog" index as the home page
       - run: |
           cp dist/blog/index.html dist/index.html
