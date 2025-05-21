@@ -8,6 +8,12 @@ static-assets:
   - path: site/static
     destination: static
 
+external-data:
+  kotomi:
+    #url: "https://kotomi.com/comments/{{ .slug }}"
+    #url: "http:/localhost:3001/{{ .slug }}"
+    url: "http://localhost:3001"
+
 sections:
   blog:
     pages:
@@ -21,6 +27,9 @@ sections:
           hero-image-url: "data-loader.jpg"
           hero-image-author: "Lars Kienle"
           hero-image-author-url: "https://unsplash.com/@larskienle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        external-data:
+          comments:
+            source: kotomi
 
       - title: "Resume Driven Development"
         description: "A reflection on technology choices in Software Engineering"

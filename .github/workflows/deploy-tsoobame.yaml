@@ -29,7 +29,8 @@ jobs:
         run: |
           gengo generate --manifest gengo.yaml --output dist --plain
         # There is no proper home page, so for now we just copy the "blog" index as the home page
-      - run: |
+      - name: Temp - Use blog index as home page
+        run: |
           cp dist/blog/index.html dist/index.html
       - name: Push to tsoobame repository
         uses: cpina/github-action-push-to-another-repository@main

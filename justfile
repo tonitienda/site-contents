@@ -1,8 +1,8 @@
 tsoobame:
-    cd ~/Projects/gengo   &&     go run cmd/main.go generate --manifest ~/Projects/blog-down/gengo.yaml --output ~/Projects/blog-down/dist
+    cd ~/Projects/gengo   &&     go run cmd/main.go generate --manifest ~/Projects/blog-down/gengo.yaml --output ~/Projects/blog-down/dist --plain
 
 serve:
-    cd ~/Projects/gengo   &&     go run cmd/main.go serve --site ~/Projects/blog-down/dist 
+    cd ~/Projects/gengo   &&     go run cmd/main.go serve --site ~/Projects/blog-down/dist --watch
 
 
 tonitienda:

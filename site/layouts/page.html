@@ -28,7 +28,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        "{{ index .Metadata "hero-image-author" }}"
+        "{{ index .Metadata "hero-image-author"  }}"
       </a>
     </small>
   </div>
@@ -37,4 +37,8 @@
   <article class="post-content">
     {{ .HTML }}
   </article>
+  <div>
+    <!-- TODO - USE | safeHTML when gengo makes the function available -->
+    {{ index .ExternalData "comments" }}
+  </div>
 </div>
