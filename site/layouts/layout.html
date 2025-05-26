@@ -21,41 +21,43 @@
     </script>
   </head>
   <body>
-    <header>
-      <div>
-        <!-- TODO - See why text wrapps up-->
-        <h2 style="width: 12rem; text-align: left">
-          <!-- We do not have a proper Home page yet, so we point to blog -->
-          <a color="inherit" href="/blog">{{.Title}}</a>
-        </h2>
-        <div class="navbar-links">
-          {{range $section := .Sections }}
-          <button
-            tabindex="0"
-            type="button"
-            {{
-            if
-            eq
-            $section
-            $.Section
-            }}class="active"
-            {{
-            end
-            }}
-          >
-            <a href="/{{$section}}" color="inherit">{{$section}}</a>
-          </button>
-          {{ end}}
+    <main>
+      <header>
+        <nav>
+          <!-- TODO - See why text wrapps up-->
+          <h2 style="width: 12rem; text-align: left">
+            <!-- We do not have a proper Home page yet, so we point to blog -->
+            <a color="inherit" href="/blog">{{.Title}}</a>
+          </h2>
+          <div class="navbar-links">
+            {{range $section := .Sections }}
+            <button
+              tabindex="0"
+              type="button"
+              {{
+              if
+              eq
+              $section
+              $.Section
+              }}class="active"
+              {{
+              end
+              }}
+            >
+              <a href="/{{$section}}" color="inherit">{{$section}}</a>
+            </button>
+            {{ end}}
+          </div>
+        </nav>
+      </header>
+
+      <div class="container mx-auto px-4 pt-8">{{ .HTML }}</div>
+
+      <footer>
+        <div>
+          <p>&copy; 2025 {{.Title}}. All rights reserved.</p>
         </div>
-      </div>
-    </header>
-
-    <div class="container mx-auto px-4 pt-8">{{ .HTML }}</div>
-
-    <footer>
-      <div>
-        <p>&copy; 2025 {{.Title}}. All rights reserved.</p>
-      </div>
-    </footer>
+      </footer>
+    </main>
   </body>
 </html>
