@@ -1,4 +1,3 @@
-title: tsoobame
 default-layout-template: "site/layouts/layout.html"
 default-page-template: "site/layouts/page.html"
 default-section-template: "site/layouts/section.html"
@@ -12,7 +11,7 @@ external-data:
   kotomi:
     #url: "https://kotomi.com/comments/{{ .slug }}"
     #url: "http:/localhost:3001/{{ .slug }}"
-    url: "http://localhost:3001"
+    url: "http://localhost:8080/comments/hello"
 
 sections:
   blog:
