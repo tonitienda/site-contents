@@ -16,6 +16,19 @@ external-data:
 sections:
   blog:
     pages:
+      - title: Simple Blue Green deployment with Multipass
+        published-at: 2025-09-13
+        description: "A simple blue green deployment using Multipass and a single VM"
+        markdown-path: site/blog/blue-green-deployment.md
+        tags: ["devops", "deployment", "multipass", "vm"]
+        metadata:
+          hero-image-url: "data-loader.jpg"
+          hero-image-author: "Lars Kienle"
+          hero-image-author-url: "https://unsplash.com/@larskienle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        external-data:
+          comments:
+            source: kotomi
+
       - title: Understanding data loader
         published-at: 2020-07-19
         description: "Create a basic dataloader to understand this great library"
