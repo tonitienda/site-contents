@@ -24,6 +24,25 @@ const APP_LEFT = NGINX_RIGHT + 100
 const APP_WIDTH = 120
 const APP_RIGHT = APP_LEFT + APP_WIDTH
 
+const connect = (from: Rect, to: Rect, ref: Line) => {
+  const fromPos = from.position()
+  const toPos = to.position()
+
+  const fromSize = from.size()
+  const toSize = to.size()
+
+  const startX = fromPos.x + fromSize.x / 2
+  const startY = fromPos.y + fromSize.y / 2
+
+  const endX = toPos.x - toSize.x / 2
+  const endY = toPos.y + toSize.y / 2
+
+  ref.points([
+    [startX, startY],
+    [endX, endY],
+  ])
+}
+
 export default makeScene2D(function* (view) {
   // References
   const browser = createRef<Browser>()
@@ -69,10 +88,6 @@ export default makeScene2D(function* (view) {
         ref={requestArrow}
         lineWidth={3}
         stroke="#3b82f6"
-        points={[
-          [BROWSER_RIGHT - 150, 0], // Browser edge
-          [NGINX_LEFT - 150, 0], // VM edge
-        ]}
         endArrow
         opacity={0}
         lineDash={[8, 4]}
@@ -129,6 +144,8 @@ export default makeScene2D(function* (view) {
       </Rect>
     </>
   )
+
+  connect(browser(), vm(), requestArrow())
 
   // Add components to VM
   vm().addComponent(
