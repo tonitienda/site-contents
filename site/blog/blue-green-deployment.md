@@ -27,19 +27,48 @@ I am not responsible for any issues caused in production systems due to followin
 ## What are we going to do
 
 In this post we will create a simple blue-green deployment for our Go app.
-Steps:
 
-- Create a simple Go server with health and status endpoints
+**Block 1: Configure the VM with nginx and the simple golang server**
+
+- Create a simple Go server with health endpoint
 - Create a local VM with multipass
 - Install nginx in the VM
 - Deploy the Go server to the VM
 - Configure nginx to proxy requests to our application
-- Implement blue-green deployment
+
+**Block 2: Configure blue green deployment**
+
+- Add status endpoint and color attribute to the server
+- Implement blue-green deployment scripts
 - Test the complete blue-green deployment process
 
 I assume knowledge of Go and HTTP servers and basic knowledge about nginx (at least that it exists and what it does).
 
-## Simple Go server
+## Block 1: Configure the VM with nginx and the simple golang server
+
+```nagare
+@layout(w:800,h:300)
+
+browser:Browser@home
+vps:VM@ubuntu {
+    nginx:Server@nginx
+    app:Server@app
+}
+
+browser.e --> nginx.w
+nginx.e --> app.w
+
+@browser(x:50,y:25,w:250,h:200)
+@home(url: "http://multipass/home", bg: "#e6f3ff", fg: "#333", text: "Home Page")
+
+@vps(x:350,y:&browser.c,w:400,h:200)
+@ubuntu(title: "ubuntu@multipass", bg: "#666", fg: "#eee", text: "Ubuntu", contentBg: "#f0f8ff")
+
+@nginx(x:20,y:&browser.c,w:150,h:40, title: "nginx", icon: "nginx", port: 80, bg: "#f0f8ff", fg: "#333")
+@app(x:200,y:&browser.c,w:150,h:40, title: "app", icon: "golang", port: 8081, bg: "#f0f8ff", fg: "#333")
+```
+
+### Simple Go server
 
 Let's first initialize our Go project:
 
@@ -74,22 +103,14 @@ func writeJsonResponse(w http.ResponseWriter, data map[string]string) {
 
 func main() {
 	var port = flag.String("port", "", "Port to listen on")
-	var color = flag.String("color", "", "Color value to return in responses")
-
 	flag.Parse()
 
-	if *port == "" || *color == "" {
-		panic("port and color are required")
+	if *port == "" {
+		panic("port is required")
 	}
 
 	http.HandleFunc("/healthz", func(w http.ResponseWriter, r *http.Request) {
 		writeJsonResponse(w, map[string]string{"message": "ok"})
-	})
-
-	http.HandleFunc("/status", func(w http.ResponseWriter, r *http.Request) {
-		writeJsonResponse(w, map[string]string{
-			"color": *color,
-		})
 	})
 
 	http.ListenAndServe(":"+*port, nil)
@@ -98,34 +119,34 @@ func main() {
 
 What this code does:
 
-- Read `--color` and `--port` flags (required)
-- Create two endpoints:
+- Read `--port` flag (required)
+- Create one endpoint:
   - `/healthz`: standard endpoint to check if a service is running
-  - `/status`: in this demo, status will just return the color of the deployment (we will use it later)
 
 We can run a quick test:
 
 ```shell
 go build -o bluegreendemo cmd/main.go
-./bluegreendemo --port 8080 --color orange &
+./bluegreendemo --port 8080 &
 sleep 1
-curl -s http://localhost:8080/status | jq
-pkill -f "./bluegreendemo --port 8080 --color orange"
+curl -s http://localhost:8080/healthz | jq
+pkill -f "./bluegreendemo --port 8080"
 ```
 
 (`jq` is optional. I use it to add some color to the JSON content)
 
 You should see something like:
 
-```json
+````json
 ...
 {
-  "color": "orange"
+  "message": "ok"
 }
 ...
 ```
 
-## Create a local VM with multipass
+
+### Create a local VM with multipass
 
 First we need to install multipass following the [official docs](https://canonical.com/multipass/install).
 
@@ -133,7 +154,7 @@ For example, for macOS with Homebrew you can just run:
 
 ```shell
 brew install multipass
-```
+````
 
 We will create a VM locally with:
 
@@ -173,7 +194,7 @@ We should see a prompt like:
 ubuntu@bluegreen-demo:~$
 ```
 
-## Install nginx
+### Install nginx
 
 We need to install nginx in Ubuntu.
 
@@ -199,13 +220,10 @@ Sep 13 10:26:14 bluegreen-demo systemd[1]: Starting nginx.service - A high perfo
 Sep 13 10:26:14 bluegreen-demo systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
 ```
 
-## Deploy and start the application in the VM
+### Deploy and start the application in the VM
 
-We will start building the `blue` version of our application.
-We will define that `blue` listens on port `8081` and `green` listens on port `8082`.
-
-- Blue: 8081
-- Green: 8082
+We will start building our application.
+We will run it on port `8081`.
 
 We will create a small script that will handle the deployment of our app.
 
@@ -233,28 +251,28 @@ multipass transfer ./bluegreendemo bluegreen-demo:bluegreendemo
 
 multipass exec bluegreen-demo -- sudo mkdir -p /app/
 multipass exec bluegreen-demo -- sudo chown ubuntu:ubuntu /app/
-multipass exec bluegreen-demo -- mv bluegreendemo /app/blue
-multipass exec bluegreen-demo -- chmod +x /app/blue
-multipass exec bluegreen-demo -- /app/blue --port 8081 --color blue &
+multipass exec bluegreen-demo -- mv bluegreendemo /app/app
+multipass exec bluegreen-demo -- chmod +x /app/app
+multipass exec bluegreen-demo -- /app/app --port 8081 &
 ```
 
-This script builds the server, transfers it to the VM, and executes it with the `blue` settings.
+This script builds the server, transfers it to the VM, and executes it on port 8081.
 
-We can test that it is running by accessing `http://<vm ip>:8081/status`
+We can test that it is running by accessing `http://<vm ip>:8081/healthz`
 
 To do so we can do:
 
 ```shell
 VM_IP=$(multipass info bluegreen-demo | grep IPv4 | awk '{print $2}')
 
-curl -s http://$VM_IP:8081/status | jq
+curl -s http://$VM_IP:8081/healthz | jq
 ```
 
 (again `jq` is optional)
 
-We have now our blue version running in the VM.
+We have now our application running in the VM.
 
-## Configure nginx to server our application
+### Configure nginx to server our application
 
 Let's define a configuration for nginx.
 Let's create this file in our local machine:
@@ -327,12 +345,126 @@ We can testing by curling our app without any port defined.
 ```shell
 VM_IP=$(multipass info bluegreen-demo | grep IPv4 | awk '{print $2}')
 
-curl -s http://$VM_IP/status | jq
+curl -s http://$VM_IP/healthz | jq
 ```
 
 We have nginx serving our app.
 
-## Scripts cleanup
+## Block 2: Configure blue green deployment
+
+```nagare
+@layout(w:800,h:300)
+
+browser:Browser@home
+vps:VM@ubuntu {
+    nginx:Server@nginx
+    blue:Server@app
+    green:Server@app
+}
+
+browser.e --> nginx.w
+nginx.e --> blue.w
+
+@browser(x:50,y:10,w:250,h:200)
+@home(url: "http://multipass/home", bg: "#e6f3ff", fg: "rgb(0, 119, 194)", text: "Blue")
+
+@vps(x:350,y:&browser.c,w:400,h:200)
+@ubuntu(title: "ubuntu@multipass", bg: "#666", fg: "#eee", text: "Ubuntu", contentBg: "#f0f8ff")
+
+@nginx(x:20,y:&browser.c,w:150,h:40, title: "nginx", icon: "nginx", port: 80, bg: "#f0f8ff", fg: "#333")
+@app(x:200,w:150,h:40,icon: "golang")
+
+@blue(y:&nginx.c,title: "blue",  port: 8081, bg: "rgb(0, 119, 194)", fg: "#fff")
+@green(y:120,title: "green", port: 8082, bg: "rgb(0, 118, 108)", fg: "#fff")
+
+```
+
+```nagare
+@layout(w:800,h:300)
+
+browser:Browser@home
+vps:VM@ubuntu {
+    nginx:Server@nginx
+    blue:Server@app
+    green:Server@app
+}
+
+browser.e --> nginx.w
+nginx.e --> green.w
+
+@browser(x:50,y:10,w:250,h:200)
+@home(url: "http://multipass/home", bg: "#e6f3ff", fg: "rgb(0, 118, 108)", text: "Green")
+
+@vps(x:350,y:&browser.c,w:400,h:200)
+@ubuntu(title: "ubuntu@multipass", bg: "#666", fg: "#eee", text: "Ubuntu", contentBg: "#f0f8ff")
+
+@nginx(x:20,y:&browser.c,w:150,h:40, title: "nginx", icon: "nginx", port: 80, bg: "#f0f8ff", fg: "#333")
+@app(x:200,w:150,h:40,icon: "golang")
+
+@blue(y:120,title: "blue",  port: 8081, bg: "rgb(0, 119, 194)", fg: "#fff")
+@green(y:&nginx.c,title: "green", port: 8082, bg: "rgb(0, 118, 108)", fg: "#fff")
+
+```
+
+### Blue Green Deployment
+
+Now that we have our basic setup with the VM, nginx, and a simple Go server, let's implement blue-green deployment.
+
+First, we need to enhance our Go server to support the status endpoint and color attribute.
+
+Update the server code to include the color flag and status endpoint:
+
+```golang
+package main
+
+import (
+	"encoding/json"
+	"flag"
+	"net/http"
+)
+
+func writeJsonResponse(w http.ResponseWriter, data map[string]string) {
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(data)
+}
+
+func main() {
+	var port = flag.String("port", "", "Port to listen on")
+	var color = flag.String("color", "", "Color value to return in responses")
+	flag.Parse()
+
+	if *port == "" || *color == "" {
+		panic("port and color are required")
+	}
+
+	http.HandleFunc("/healthz", func(w http.ResponseWriter, r *http.Request) {
+		writeJsonResponse(w, map[string]string{"message": "ok"})
+	})
+
+	http.HandleFunc("/status", func(w http.ResponseWriter, r *http.Request) {
+		writeJsonResponse(w, map[string]string{
+			"color": *color,
+		})
+	})
+
+	http.ListenAndServe(":"+*port, nil)
+}
+```
+
+What this code does:
+
+- Read `--color` and `--port` flags (required)
+- Create two endpoints:
+  - `/healthz`: standard endpoint to check if a service is running
+  - `/status`: returns the color of the deployment
+
+We will define that `blue` listens on port `8081` and `green` listens on port `8082`.
+
+- Blue: 8081
+- Green: 8082
+
+### Enhanced Deployment Scripts
 
 Now our script runs from our host and we are mixing commands for transfering files and commands for executing actions in our VPS.
 
@@ -367,6 +499,68 @@ chmod +x scripts/apply.sh
 chmod +x scripts/ci.sh
 chmod +x scripts/prepare.sh
 ```
+
+#### prepare.sh
+
+We will take the first part of the `deployment.sh` file and move it to `prepare.sh`.
+We will also add the transfer of the `apply.sh` file itself.
+
+```bash
+#! /bin/bash
+
+# Cross-compile for Linux ARM64 (typical for multipass VMs)
+GOOS=linux GOARCH=arm64 go build -o bluegreendemo cmd/main.go
+
+# Transfer files to the VM
+multipass transfer ./bluegreendemo bluegreen-demo:bluegreendemo
+multipass transfer ./nginx/nginx.conf bluegreen-demo:nginx.conf
+multipass transfer ./scripts/apply.sh bluegreen-demo:apply.sh
+```
+
+### apply.sh
+
+We will take the second part of the `deploy.sh` file and move it to `apply.sh`.
+We will run within the VPS so we can get rid of `multipass exec`:
+
+```bash
+#! /bin/bash
+
+sudo mkdir -p /app/
+sudo chown ubuntu:ubuntu /app/
+mv bluegreendemo /app/blue
+chmod +x /app/blue
+/app/blue --port 8081 --color blue &
+
+sudo mv nginx.conf /etc/nginx/nginx.conf
+sudo nginx -s reload
+sleep 1
+```
+
+### ci.sh
+
+We will invoke both files, one after the other along side some messages:
+
+```bash
+#! /bin/bash
+
+echo "Preparing the VM..."
+./scripts/prepare.sh
+
+
+
+echo "Deploying the new version..."
+multipass exec bluegreen-demo -- ./apply.sh
+
+curl -s http://$(multipass info bluegreen-demo | grep IPv4 | awk '{print $2}')/status
+```
+
+We should be able to run `ci.sh` without erros:
+
+```shell
+./scripts/ci.sh
+```
+
+The response is always the same for now.
 
 ### prepre.sh
 
@@ -430,16 +624,16 @@ We should be able to run `ci.sh` without erros:
 
 The response is always the same for now.
 
-## Blue Green deployment
+### Implementing Blue-Green Deployment
 
-We will run our blue/geen deployment. This is what we will need to do:
+We will run our blue/green deployment. This is what we will need to do:
 
 - Discover the current color so we decide the next color.
 - Copy the new app into the right directory (next color).
 - Start the application with the right args.
 - Update nginx to serve the next color.
 
-### Discover the color
+#### Discover the color
 
 We just need to request our /status endpoint:
 
@@ -547,7 +741,7 @@ blue
 
 Green is running properly but nginx still points to `blue` (we hardcoded it, remember?)
 
-## Update nginx to point to next color:
+### Update nginx to point to next color:
 
 We are going to add 2 files to the nginx directory:
 
@@ -636,7 +830,7 @@ VM_IP=$(multipass info bluegreen-demo | grep IPv4 | awk '{print $2}')
 curl -s http://$VM_IP/status | jq -r .color
 ```
 
-## Conclusion
+### Conclusion
 
 Using simple scripts and nginx we could create a basic blue/green deployment that would allow us deploy our application to a VPS without down time.
 
