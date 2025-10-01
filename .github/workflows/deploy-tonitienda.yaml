@@ -22,10 +22,15 @@ jobs:
           fetch-depth: 0
         # Use the latest version of gengo
         # Trick to change the title of the site until a better solution is supported
-      - name: Install gengo
+      - name: Install gengo and nagare
         run: |
+          # Install gengo
           curl -fsSL https://raw.githubusercontent.com/saasuke-labs/gengo/main/install/install.sh | bash
           gengo version
+
+          # Install nagare using local script
+          chmod +x ./scripts/install-nagare.sh
+          ./scripts/install-nagare.sh
       - name: Generate site
         run: |
           gengo generate --manifest gengo.yaml --manifest gengo.tonitienda.yaml --output dist --plain
