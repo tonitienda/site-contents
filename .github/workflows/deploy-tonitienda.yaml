@@ -22,18 +22,34 @@ jobs:
           fetch-depth: 0
         # Use the latest version of gengo
         # Trick to change the title of the site until a better solution is supported
-      - name: Install gengo and nagare
+      - name: Setup tools
         run: |
           # Install gengo
           curl -fsSL https://raw.githubusercontent.com/saasuke-labs/gengo/main/install/install.sh | bash
           gengo version
 
-          # Install nagare using local script
-          chmod +x ./scripts/install-nagare.sh
-          ./scripts/install-nagare.sh
+          # Install nagare
+          curl -fsSL https://raw.githubusercontent.com/saasuke-labs/nagare/main/install/install.sh | bash
+
+      - name: Start nagare server
+        run: |
+          # Start nagare in the background and save its PID
+          nagare &
+          echo $! > nagare.pid
+          # Give it a moment to start up
+          sleep 2
+
       - name: Generate site
         run: |
           gengo generate --manifest gengo.yaml --manifest gengo.tonitienda.yaml --output dist --plain
+
+      - name: Stop nagare server
+        if: always() # Run this step even if previous steps fail
+        run: |
+          if [ -f nagare.pid ]; then
+            kill $(cat nagare.pid)
+            rm nagare.pid
+          fi
         # There is no proper home page, so for now we just copy the "blog" index as the home page
       - name: Temp - Use blog index as home page
         run: |
