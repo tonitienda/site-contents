@@ -137,14 +137,13 @@ pkill -f "./bluegreendemo --port 8080"
 
 You should see something like:
 
-````json
+```json
 ...
 {
   "message": "ok"
 }
 ...
 ```
-
 
 ### Create a local VM with multipass
 
@@ -154,7 +153,7 @@ For example, for macOS with Homebrew you can just run:
 
 ```shell
 brew install multipass
-````
+```
 
 We will create a VM locally with:
 
