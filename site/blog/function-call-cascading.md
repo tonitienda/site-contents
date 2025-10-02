@@ -24,18 +24,20 @@ We can visualize it as a sequence:
 ```nagare
 @layout(h:300,w:800)
 
-registerUser
-validateUser
-createUser
-sendConfirmationEmail
-logRegistration
+registerUser:Server@fn
+validateUser:Server@fn
+createUser:Server@fn
+sendConfirmationEmail:Server@fn
+logRegistration:Server@fn
 
 
-registerUser(x:0,y:0,h:30,w:100)
-validateUser(x:50,y:50,h:30,w:100)
-createUser(x:100,y:100,h:30,w:100)
-sendConfirmationEmail(x:150,y:150,h:30,w:100)
-logRegistration(x:200,y:200,h:30,w:100)
+@fn(h:30,w:100)
+
+@registerUser(x:0,y:0)
+@validateUser(x:50,y:50)
+@createUser(x:100,y:100)
+@sendConfirmationEmail(x:150,y:150)
+@logRegistration(x:200,y:200)
 
 registerUser.s --> validateUser.w
 ```
