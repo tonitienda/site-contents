@@ -95,7 +95,7 @@ to be executed.
 
 As a sequence it would look like:
 
-```mermaid
+```nagare
 @layout(h:300,w:800)
 
 registerUser
