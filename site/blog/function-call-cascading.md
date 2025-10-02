@@ -105,18 +105,18 @@ sendConfirmationEmail@fn
 logRegistration@fn
 
 
-@fn(h:30,w:300)
+@fn(h:30,w:300,x=150)
 
-@registerUser(x:0,y:0,h:30, w:800)
-@validateUser(x:100,y:50)
-@createUser(x:200,y:100)
-@sendConfirmationEmail(x:300,y:150)
-@logRegistration(x:400,y:200)
+@registerUser(x:0,y:0,h:300, w:30)
+@validateUser(y:50)
+@createUser(y:100)
+@sendConfirmationEmail(y:150)
+@logRegistration(y:200)
 
-registerUser.ws --> validateUser.n
-registerUser.sw --> createUser.n
-registerUser.w --> sendConfirmationEmail.n
-registerUser.se --> logRegistration.n
+registerUser.en --> validateUser.w
+registerUser.e --> createUser.w
+registerUser.es --> sendConfirmationEmail.w
+registerUser.se --> logRegistration.w
 ```
 
 And this is the code:
