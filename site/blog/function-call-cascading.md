@@ -21,6 +21,25 @@ Consider a web application that processes user registrations. When a new user si
 One way of implementing this functionality is using function call cascading.
 We can visualize it as a sequence:
 
+```nagare
+@layout(h:300,w:800)
+
+registerUser
+validateUser
+createUser
+sendConfirmationEmail
+logRegistration
+
+
+registerUser(x:0,y:0)
+validateUser(x:50,y:50)
+createUser(x:100,y:100)
+sendConfirmationEmail(x:150,y:150)
+logRegistration(x:200,y:200)
+
+registerUser.s --> validateUser.w
+```
+
 ```mermaid
 
   sequenceDiagram
