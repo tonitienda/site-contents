@@ -108,10 +108,10 @@ logRegistration@fn
 @fn(h:30,w:300,x:150)
 
 @registerUser(x:0,y:0,h:300, w:30)
-@validateUser(y:50)
-@createUser(y:100)
-@sendConfirmationEmail(y:150)
-@logRegistration(y:200)
+@validateUser(y:75)
+@createUser(y:150)
+@sendConfirmationEmail(y:225)
+@logRegistration(y:270)
 
 registerUser.en --> validateUser.w
 registerUser.e --> createUser.w
