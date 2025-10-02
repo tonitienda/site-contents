@@ -24,72 +24,58 @@ We can visualize it as a sequence:
 ```nagare
 @layout(h:300,w:800)
 
-registerUser:Server@fn
-validateUser:Server@fn
-createUser:Server@fn
-sendConfirmationEmail:Server@fn
-logRegistration:Server@fn
+registerUser@fn
+validateUser@fn
+createUser@fn
+sendConfirmationEmail@fn
+logRegistration@fn
 
 
-@fn(h:30,w:100)
+@fn(h:30,w:300)
 
 @registerUser(x:0,y:0)
-@validateUser(x:50,y:50)
-@createUser(x:100,y:100)
-@sendConfirmationEmail(x:150,y:150)
-@logRegistration(x:200,y:200)
+@validateUser(x:100,y:50)
+@createUser(x:200,y:100)
+@sendConfirmationEmail(x:300,y:150)
+@logRegistration(x:400,y:200)
 
-registerUser.s --> validateUser.w
-```
-
-```mermaid
-
-  sequenceDiagram
-
-  actor Client
-  participant registerUser
-  participant validateUser
-  participant createUser
-  participant sendConfirmationEmail
-  participant logRegistration
-
-  registerUser ->> validateUser: userData
-  validateUser ->> createUser: userData
-  createUser ->> sendConfirmationEmail: userData
-  sendConfirmationEmail ->> logRegistration: userData
+registerUser.sw --> validateUser.w
+validateUser.sw --> createUser.w
+createUser.sw --> sendConfirmationEmail.w
+sendConfirmationEmail.sw --> logRegistration.w
 ```
 
 And the code would look like:
 
 ```javascript
 function registerUser(userData) {
-  validateUser(userData);
+  validateUser(userData)
 }
 
 function validateUser(userData) {
   if (userData.username && userData.email && userData.password) {
-    createUser(userData);
+    createUser(userData)
   } else {
-    console.log("Invalid user data.");
+    console.log("Invalid user data.")
   }
 }
 
 function createUser(userData) {
   // Logic to create a user account
 
-  sendConfirmationEmail(userData);
+  sendConfirmationEmail(userData)
 }
 
 function sendConfirmationEmail(userData) {
   // Logic to send a confirmation email
 
-  logRegistration(userData);
+  logRegistration(userData)
 }
 
 function logRegistration(userData) {
   // Logic to log the registration event
 
-  console.log("User registration completed.");
+  console.log("User registration completed.")
 }
 ```
 
@@ -110,20 +96,27 @@ to be executed.
 As a sequence it would look like:
 
 ```mermaid
+@layout(h:300,w:800)
 
-  sequenceDiagram
+registerUser
+validateUser@fn
+createUser@fn
+sendConfirmationEmail@fn
+logRegistration@fn
 
-  actor Client
-  participant registerUser
-  participant validateUser
-  participant createUser
-  participant sendConfirmationEmail
-  participant logRegistration
 
-  registerUser ->> validateUser: userData
-  registerUser ->> createUser: userData
-  registerUser ->> sendConfirmationEmail: userData
-  registerUser ->> logRegistration: userData
+@fn(h:30,w:300)
+
+@registerUser(x:0,y:0,h:30, w:800)
+@validateUser(x:100,y:50)
+@createUser(x:200,y:100)
+@sendConfirmationEmail(x:300,y:150)
+@logRegistration(x:400,y:200)
+
+registerUser.ws --> validateUser.n
+registerUser.sw --> createUser.n
+registerUser.w --> sendConfirmationEmail.n
+registerUser.se --> logRegistration.n
 ```
 
 And this is the code:
@@ -131,17 +124,17 @@ And this is the code:
 ```javascript
 function registerUser(userData) {
   if (validateUser(userData)) {
-    createUser(userData);
-    sendConfirmationEmail(userData);
-    logRegistration(userData);
-    console.log("User registration completed.");
+    createUser(userData)
+    sendConfirmationEmail(userData)
+    logRegistration(userData)
+    console.log("User registration completed.")
   } else {
-    console.log("Invalid user data.");
+    console.log("Invalid user data.")
   }
 }
 
 function validateUser(userData) {
-  return userData.username && userData.email && userData.password;
+  return userData.username && userData.email && userData.password
 }
 
 function createUser(userData) {
