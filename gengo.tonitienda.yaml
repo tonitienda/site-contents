@@ -9,7 +9,7 @@ sections:
       - title: Running
         published-at: 2026-01-29
         description: "Running first page"
-        markdown-path: site/blog/blue-green-deployment.md
+        markdown-path: site/running/running.md
         tags: ["running", "training"]
         metadata:
           hero-image-url: "blue-green-deployment.jpg"
