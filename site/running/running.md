@@ -11,7 +11,7 @@ ylabel: Total time (mins) / Jog Time (mins) / Jog Distance (Kms)
 legend: top-right
 grid: true
 
-series: total time | jog time | pace
+series: total time | jog time | jog distance 
 color: #333333 | #3b82f6 | #ef4444
 style: line | line | line
 data:
@@ -23,5 +23,5 @@ data:
   2025-12-26: 27.48 | 0 | 0
   2025-12-27: 35.50 | 0 | 0
   2025-12-29: 38.12 | 0 | 0
-  2025-12-31: 28.23 | 0 | 0
+  2025-12-31: 28.23 | 7.37 | 0.87
 ```
