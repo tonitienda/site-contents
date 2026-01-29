@@ -2,3 +2,17 @@ title: tonitienda
 
 metadata:
   ga-id: "G-FC5LG6LC5J"
+  
+sections:
+  running:
+    pages:
+      - title: Running
+        published-at: 2026-01-29
+        description: "Running first page"
+        markdown-path: site/blog/blue-green-deployment.md
+        tags: ["running", "training"]
+        metadata:
+          hero-image-url: "blue-green-deployment.jpg"
+          hero-image-author: "Brian Yurasits"
+          hero-image-author-url: "https://unsplash.com/@brian_yuri?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+       
