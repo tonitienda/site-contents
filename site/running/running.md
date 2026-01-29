@@ -7,19 +7,21 @@ width: 900
 height: 600
 xaxis: date
 xlabel: Date
-ylabel: Distance (km) / Pace (min/km)
+ylabel: Total time (mins) / Jog Time (mins) / Jog Distance (Kms)
 legend: top-right
 grid: true
 
-series: distance | pace
-color: #3b82f6 | #ef4444
-style: line | dashed
+series: total time | jog time | pace
+color: #333333 | #3b82f6 | #ef4444
+style: line | line | line
 data:
-  2025-01-01: 3.01 | 6.5
-  2025-01-02: 3.5 | 6.3
-  2025-01-03: 4.2 | 6.1
-  2025-01-04: 2.8 | 6.8
-  2025-01-05: 5.1 | 5.9
-  2025-01-06: 4.6 | 6
-  2025-01-07: 6.2 | 6.2
+  2025-12-18: 28:55 | 0 | 0
+  2025-12-19: 27:31 | 0 | 0
+  2025-12-20: 28:54 | 0 | 0
+  2025-12-22: 36:56 | 0 | 0
+  2025-12-24: 33:09 | 0 | 0
+  2025-12-26: 27:48 | 0 | 0
+  2025-12-27: 35:50 | 0 | 0
+  2025-12-29: 38:12 | 0 | 0
+  2025-12-31: 28:23 | 0 | 0
 ```
