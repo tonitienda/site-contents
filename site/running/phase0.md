@@ -1,94 +1,143 @@
-# Back to running - Phase 0
+# Back to running – Phase 0: Reconnect
+
+> **Why this exists**
+> This is not a success story or a training plan to follow. It’s a log for my future self—something to reread if I stop running again and need a calm, realistic way back. If it helps someone in their 40s (or later) feel that _ordinary people can enjoy running again_, that’s a bonus.
+
+I’m intentionally keeping this short, skimmable, and boring-in-a-good-way. Deep dives (shoes, nutrition, philosophy) will live in separate posts and be linked from here.
+
+---
 
 ## Preconditions
 
-- Mid 40's
-- 4-5 years without running regularly
-- Longest run 18Kms in 2020. Suffering.
+- Mid‑40s
+- 4–5 years without running consistently
+- Last “long” run: **18 km in 2020**, suffered the whole way
 
-## Plan
+---
 
-### Goals of this phase
+## Phase 0 – Plan
 
-- Build the habit.
-- Training the nervous system to stay calm when running.
-- Minor fitness improvements.
+### Goals
 
-### Non Goals
+- Rebuild the habit
+- Teach the nervous system that running is _not_ an emergency
+- Small, secondary fitness improvements
 
-- Improve performance
-- Get stronger
-- Loose weight
+### Non‑goals
 
-### Risks
+- Performance gains
+- Strength gains
+- Weight loss
 
-- Lose motivation and stop showing up regularly
-- Rush things to get short term improvements
+### Main risks
 
-### Execution Plan
+- Losing motivation and disappearing quietly
+- Rushing progress for short‑term validation
 
-- Walk with short portion of jogging
-- Keep HR under 125 rpm (as much as possible)
-- Show up 5 times per week (also best effort)
-- Rest if needed. It would be counter productive to force now.
+### Execution rules
 
-## Status
+- Walk + short jogging intervals
+- Keep heart rate **≤ 125 bpm** (best effort, not obsession)
+- Show up **~5× per week** (imperfect attendance allowed)
+- Rest when needed — forcing things now would be counter‑productive
+
+---
+
+## Current status
 
 ### Duration
 
-7 weeks so far. Might take 9 weeks but not sure. I assess week by week.
+- **7 weeks so far**
+- Likely 8–9 weeks total, reassessed week by week
 
-### Experienced changes so far
+### What changed so far
 
-- HR is less spiky and more stable
-- Initial pace at < 125rpm was ~9:30 min/km. After some weeks (4 or 5) it got closer to 8:30min/km
-- Legs muscles more plump.
-  - No muscle mass or huge improvements yet. Only glycogen that also brings water and blood vessels dilated. So basically my legs have more water. But it stills feels good.
+- Heart rate is less spiky and more predictable
+- Pace at ≤125 bpm:
+  - Start: ~**9:30 min/km**
+  - After ~4–5 weeks: ~**8:30 min/km**
 
-### Gear
+- Legs feel more "alive"
+  - Not real muscle growth yet
+  - Mostly glycogen + water + blood flow
+  - Still: noticeable and motivating
 
-#### Clothing
+---
 
-I use normal and warm clothing, nothing fancy.
+## Gear
 
-#### Shoes
+### Clothing
 
-I use Merrel Vapor Glove 6. I have used Vapor Gloves for a long time now, for walking but also for running some years ago.
-I tried another kind-of-minimal shoe, but I did not like the feeling so I keep using my Vapor Gloves.
-As the jogging distance increases I might think about changing them. But in the past I could run 18Kms with my old Vapor Glove 4, so there is nothing decided.
+- Normal, weather‑appropriate clothes
+- Nothing technical, nothing special
 
-### Nutrition
+### Shoes
 
-Because of my diet, I regularly take protein powder and creatine. Not because of running.
+- **Merrell Vapor Glove 6**
+- I’ve used Vapor Gloves for years (walking + past running)
+- Tried another minimal shoe → didn’t like the feel
+- Sticking with these for now
+- Re‑evaluation later if jogging volume increases
+  - Historically I ran up to **18 km** in Vapor Glove 4, so no urgency
 
-I did not change anything conciously as part of this phase.
-From weeks 6-7 I started feeling more hungry. My body was asking for more actual FOOD and craving less junk food. I am listening to it but not making any plans.
+---
 
-### Execution
+## Nutrition
 
-- I am doing sessions of ~30 minutes (lately became 33 minutes).
-- I jogged for 5 minutes and now around 7 minutes.
-- After some irregular sessions I started to fix the route and therefore the distance.
-- In the later weeks I started fixing the route and the number of minutes (~33) so the total distance could increase over time.
+- No intentional nutrition changes for this phase
 
-## Next Phase
+- I already take:
+  - Protein powder
+  - Creatine
+    (not because of running)
 
-### Plan
+- Around weeks **6–7**:
+  - Increased hunger
+  - More craving for _actual food_
+  - Less interest in junk
 
-Change one of two variables:
+- I’m listening, but not planning or optimizing yet
 
-- Either lengthening the total time up to ~38 minutes and keeping the same jogging time in 7 minutes or,
-- lengthening the jogging time to ~10 minutes and keeping the same total time in 33 minutes
+---
 
-### When
+## Training execution (what this looks like)
 
-- Route and pace stabilize even further
-- Walking/Running becomes familiar and not an event. Just normal.
+- Sessions: **~30 min**, recently **~33 min**
+- Jogging time:
+  - Started: ~5 min
+  - Now: ~7 min
+
+- Early sessions were irregular (even full walking days)
+- Later adjustments:
+  - Fixed route
+  - Fixed total time (~33 min)
+  - Let distance increase naturally
+
+---
+
+## Next phase (tentative)
+
+### Planned change: _one variable only_
+
+Either:
+
+- Increase total time to **~38 min**, keep jogging at ~7 min
+  **or**
+- Increase jogging to **~10 min**, keep total time at ~33 min
+
+### When Phase 1 starts
+
+- Route and pace feel stable
+- Walk/run sessions feel normal and unremarkable
+- Running is no longer an "event" — just something I do
+
+---
 
 ## Metrics
 
-We can see how the first sessions were irregular with a session where I only walked.
-Slowly the sessions became por regular and predictable and I could keep a steady and nice HR.
+Early sessions were inconsistent, including a fully walking day. Over time, sessions became more regular, predictable, and heart rate stabilized.
+
+(I track / act upon weekly trends rather than judging individual sessions.)
 
 ```nagare
 chart
