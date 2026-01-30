@@ -5,6 +5,8 @@
 
 I’m intentionally keeping this short, skimmable, and boring-in-a-good-way. Deep dives (shoes, nutrition, philosophy) will live in separate posts and be linked from here.
 
+[Jump to the metrics](#metrics)
+
 ---
 
 ## Preconditions
