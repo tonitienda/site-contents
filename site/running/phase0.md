@@ -137,7 +137,7 @@ Either:
 
 Early sessions were inconsistent, including a fully walking day. Over time, sessions became more regular, predictable, and heart rate stabilized.
 
-(I track / act upon weekly trends rather than judging individual sessions.)
+Even though the metrics are recorded per session, I only look for patterns at the weekly level. Individual sessions don’t matter much.
 
 ```nagare
 chart
