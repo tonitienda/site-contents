@@ -6,7 +6,7 @@ serve:
 
 
 tonitienda:
-    cd ~/Projects/gengo   &&     go run cmd/main.go generate --manifest ~/Projects/blog-down/gengo.yaml --manifest ~/Projects/blog-down/gengo.tonitienda.yaml --output ~/Projects/blog-down/dist
+    gengo generate --manifest gengo.yaml --manifest gengo.tonitienda.yaml --output dist
 
 
 

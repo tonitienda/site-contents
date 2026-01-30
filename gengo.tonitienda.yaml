@@ -2,17 +2,16 @@ title: tonitienda
 
 metadata:
   ga-id: "G-FC5LG6LC5J"
-  
+
 sections:
   running:
     pages:
-      - title: Running
+      - title: Back to Running - Phase 0
         published-at: 2026-01-29
-        description: "Running first page"
-        markdown-path: site/running/running.md
+        description: "How I came back to running, step by step. Phase 0."
+        markdown-path: site/running/phase0.md
         tags: ["running", "training"]
         metadata:
-          hero-image-url: "blue-green-deployment.jpg"
-          hero-image-author: "Brian Yurasits"
-          hero-image-author-url: "https://unsplash.com/@brian_yuri?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-       
+          hero-image-url: "running-phase-0.jpg"
+          hero-image-author: "Derek Owens"
+          hero-image-author-url: "https://unsplash.com/@derekowensheart"
