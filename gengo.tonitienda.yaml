@@ -8,7 +8,7 @@ sections:
     pages:
       - title: Back to Running - Phase 0
         published-at: 2026-01-29
-        description: "How I came back to running, step by step. Phase 0."
+        description: "A log for my future self—something to reread if I stop running again and need a calm, realistic way back."
         markdown-path: site/running/phase0.md
         tags: ["running", "training"]
         metadata:
