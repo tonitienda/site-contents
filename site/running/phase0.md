@@ -42,6 +42,7 @@ I’m intentionally keeping this short, skimmable, and boring-in-a-good-way. Dee
 - Keep heart rate **≤ 125 bpm** (best effort, not obsession)
 - Show up **~5× per week** (imperfect attendance allowed)
 - Rest when needed — forcing things now would be counter‑productive
+- Feel better and more energized after the walk/run than before.
 
 ---
 
