@@ -140,11 +140,12 @@ Probably Week 9.
 
 ### Phase 1: training starts
 
-Have different types of sessions.
-- Easy: similar to the ones at the end of Phase 0.5. 3 times per week.
-- Medium: some more distance at the same effort (or slightly more effort). Once per week.
+Phase 1 will focus on structured variation once the habit feels normal.
 
-- Long: noticeable longer session af lower effort than easy. Once per week
+Therefore I will start having different types of sessions:
+- **Easy**: similar to the ones at the end of Phase 0.5. 3 times per week.
+- **Medium**: some more distance at the same effort (or slightly more effort). Once per week.
+- **Long**: noticeable longer session af lower effort than easy. Once per week
 
 #### When Phase 1 starts 
 
