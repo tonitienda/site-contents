@@ -77,11 +77,15 @@ I’m intentionally keeping this short, skimmable, and boring-in-a-good-way. Dee
 ### Shoes
 
 - **Merrell Vapor Glove 6**
-- I’ve used Vapor Gloves for years (walking + past running)
-- Tried another minimal shoe → didn’t like the feel
-- Sticking with these for now
-- Re‑evaluation later if jogging volume increases
+  - I’ve used Vapor Gloves for years (walking + past running)
+  - Tried another minimal shoe → didn’t like the feel
+  - Sticking with these for now
+  - Re‑evaluation later if jogging volume increases
   - Historically I ran up to **18 km** in Vapor Glove 4, so no urgency
+ 
+### Accessories 
+
+- Garmin Forerunner 245 (bought in 2020)
 
 ---
 
