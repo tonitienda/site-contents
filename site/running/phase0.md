@@ -3,7 +3,7 @@
 > **Why this exists**
 > This is not a success story or a training plan to follow. It’s a log for my future self—something to reread if I stop running again and need a calm, realistic way back. If it helps someone in their 40s (or later) feel that _ordinary people can enjoy running again_, that’s a bonus.
 
-I’m intentionally keeping this short, skimmable, and boring-in-a-good-way. Deep dives (shoes, nutrition, philosophy) will live in separate posts and be linked from here.
+I’m intentionally keeping this short, skimmable, and boring-in-a-good-way. Deep dives (shoes, nutrition, philosophy) if they exist, will live in separate posts and be linked from here.
 
 [Jump to the metrics](#metrics)
 
@@ -118,21 +118,38 @@ I’m intentionally keeping this short, skimmable, and boring-in-a-good-way. Dee
 
 ---
 
-## Next phase (tentative)
+## Next phases (tentative)
 
-### Planned change: _one variable only_
+### Phase 0.5: more load 
 
-Either:
+Add some load to the current sessions.
 
-- Increase total time to **~38 min**, keep jogging at ~7 min
-  **or**
-- Increase jogging to **~10 min**, keep total time at ~33 min
+- First Increase total time to **~38 min**, keep jogging at ~7 min
 
-### When Phase 1 starts
+- Later Increase jogging to **~10 min**, keep total time at ~38 min
+
+- Iterate
+
+#### When Phase 0.5 starts
 
 - Route and pace feel stable
 - Walk/run sessions feel normal and unremarkable
 - Running is no longer an "event" — just something I do
+
+Probably Week 9.
+
+### Phase 1: training starts
+
+Have different types of sessions.
+- Easy: similar to the ones at the end of Phase 0.5. 3 times per week.
+- Medium: some more distance at the same effort (or slightly more effort). Once per week.
+
+- Long: noticeable longer session af lower effort than easy. Once per week
+
+#### When Phase 1 starts 
+
+Not sure yet. But at some point I will want to do longer sessions but not 5x per week. So I will add them as Medium and/or Long sessions and keep the rest stable for some time.
+
 
 ---
 
