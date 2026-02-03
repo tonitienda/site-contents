@@ -82,8 +82,8 @@ I’m intentionally keeping this short, skimmable, and boring-in-a-good-way. Dee
   - Sticking with these for now
   - Re‑evaluation later if jogging volume increases
   - Historically I ran up to **18 km** in Vapor Glove 4, so no urgency
- 
-### Accessories 
+
+### Accessories
 
 - Garmin Forerunner 245 (bought in 2020)
 
@@ -124,7 +124,7 @@ I’m intentionally keeping this short, skimmable, and boring-in-a-good-way. Dee
 
 ## Next phases (tentative)
 
-### Phase 0.5: more load 
+### Phase 0.5: more load
 
 Add some load to the current sessions.
 
@@ -147,14 +147,14 @@ Probably Week 9.
 Phase 1 will focus on structured variation once the habit feels normal.
 
 Therefore I will start having different types of sessions:
+
 - **Easy**: similar to the ones at the end of Phase 0.5. 3 times per week.
 - **Medium**: some more distance at the same effort (or slightly more effort). Once per week.
 - **Long**: noticeable longer session af lower effort than easy. Once per week
 
-#### When Phase 1 starts 
+#### When Phase 1 starts
 
 Not sure yet. But at some point I will want to do longer sessions but not 5x per week. So I will add them as Medium and/or Long sessions and keep the rest stable for some time.
-
 
 ---
 
@@ -167,7 +167,7 @@ Even though the metrics are recorded per session, I only look for patterns at th
 ```nagare
 chart
 title: Training Metrics
-width: 900
+width: 1000
 height: 400
 xaxis: date
 xlabel: Date
@@ -184,7 +184,7 @@ scale
   label: Distance (Kms)
   type: number
   min: 0
-  max: 4
+  max: 5
 
 
 
@@ -227,4 +227,5 @@ data:
   2026-01-30: 33:14 | 6:58  | 3.51  | 0.86
   2026-01-31: 33:08 | 7:06  | 3.45  | 0.87
   2026-02-02: 34:01 | 7:56  | 3.44  | 0.92
+  2026-02-03: 33:18 | 7:09  | 3.48  | 0.89
 ```
