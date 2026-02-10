@@ -50,20 +50,54 @@ I’m intentionally keeping this short, skimmable, and boring-in-a-good-way. Dee
 
 ### Duration
 
-- **7 weeks so far**
-- Likely 8–9 weeks total, reassessed week by week
+- **8 weeks so far**
 
 ### What changed so far
 
-- Heart rate is less spiky and more predictable
-- Pace at ≤125 bpm:
-  - Start: ~**9:30 min/km**
-  - After ~4–5 weeks: ~**8:30 min/km**
+#### Weeks 1-4
 
+- Heart rate is spiky.
+  - Small increase in pace / slope HR goes up quickly.
+  - Slowing down does not bring HR down. I need to walk for that.
+- Pace at ≤125 bpm: ~**9:30 min/km**
+
+#### Structure
+
+Pace, route, duration, etc. changing day by day and slowly stabilizing.
+
+Started to run [distance-bound](starting-distance-vs-time-bound-sessions.html): same path.
+
+- Walking ~**30 min**
+- Jogging ~**5-9 min** (depending on the day)
+
+#### Weeks 4-7
+
+- Heart rate is less spiky and more predictable
+- Pace at ≤125 bpm: ~**8:30 min/km**
 - Legs feel more "alive"
   - Not real muscle growth yet
   - Mostly glycogen + water + blood flow
   - Still: noticeable and motivating
+
+##### Structure:
+
+Started to do the sessions [time bound](starting-distance-vs-time-bound-sessions.html). Same time getting more distance over time.
+
+- Walking ~**33 min**
+- Jogging ~**7 min** (depending on the day)
+
+#### Weeks 8-now
+
+- Good and tired days are noticeable
+  - Good days I feel very relaxed and calm
+  - I allow bad days to be slow. Even these days HR is smooth and less spike
+
+##### Structure
+
+Mid week 8 I added more walking at the start:
+
+- Walking ~**38 min**
+- Jogging ~**7 min** (depending on the day)
 
 ---
 

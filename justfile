@@ -2,7 +2,7 @@ tsoobame:
     cd ~/Projects/gengo   &&     go run cmd/main.go generate --manifest ~/Projects/blog-down/gengo.yaml --manifest ~/Projects/blog-down/gengo.tsoobame.yaml --output ~/Projects/blog-down/dist --plain
 
 serve:
-    cd ~/Projects/gengo   &&     go run cmd/main.go serve --site ~/Projects/blog-down/dist --watch
+    gengo serve --site ./dist --watch
 
 
 tonitienda:

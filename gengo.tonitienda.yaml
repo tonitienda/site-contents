@@ -15,3 +15,12 @@ sections:
           hero-image-url: "running-phase-0.jpg"
           hero-image-author: "Derek Owens"
           hero-image-author-url: "https://unsplash.com/@derekowensheart"
+      - title: "Starting: Distance vs Time bound sessions"
+        published-at: 2026-02-10
+        description: "A log for my future self—something to reread if I stop running again and need a calm, realistic way back."
+        markdown-path: site/running/starting-distance-vs-time-bound-sessions.md
+        tags: ["running", "training", "starting"]
+        metadata:
+          hero-image-url: "distance-vs-time-bound.jpg"
+          hero-image-author: "Aron Visuals"
+          hero-image-author-url: "https://unsplash.com/@aronvisuals"
