@@ -270,3 +270,10 @@ data:
   2026-02-11: 38:31 | 7:21  | 4.14  | 0.93
   2026-02-13: 38:14 | 7:28  | 3.95  | 0.92
 ```
+
+Notes on the chart:
+
+- First weeks were irregular. Trying to build the habit and no structure
+- At some point around Week 4 the route and structure stabilized.
+- At some point around Week 6 or 7 I fixed the structure to 33mins in total, 7 of them jogging.
+- Mid Week 8 I extended the walking time at the beginning and started doing 38 mins in total, still 7 of them jogging.
