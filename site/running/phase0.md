@@ -224,6 +224,8 @@ scale
   id: blocks
   label: blocks
   type: number
+  min: 0
+  max: 5
 
 
 
