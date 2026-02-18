@@ -286,4 +286,4 @@ Notes on the chart:
 - At some point around Week 4 the route and structure stabilized.
 - At some point around Week 6 or 7 I fixed the structure to 33mins in total, 7 of them jogging.
 - Mid Week 8 I extended the walking time at the beginning and started doing 38 mins in total, still 7 of them jogging.
-- Week 10 I started doing some extra jogging blocks when I felt good. No purpose, just enjoying.
+- At Week 10 I started allowing some extra jogging blocks when I felt good. No purpose, just enjoying.
