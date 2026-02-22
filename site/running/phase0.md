@@ -231,7 +231,7 @@ scale
 
 series: total time | jog time | total distance | jog distance | job blocks
 color:  #cc9999 | #aa7777 | #9999cc | #7777aa | #aaaaaa
-style: line | line | line | line | line
+style: dashed | line | dashed | line | dashed
 yaxis: time | time | distance | distance | blocks
 type: duration | duration | number | number | number
 data:
