@@ -230,7 +230,7 @@ scale
 
 
 series: total time | jog time | total distance | jog distance | job blocks
-color:  #1d39b7 | #3b82f6 | #8c1010 | #ef4444 | #999999
+color:  #cc9999 | #aa7777 | #9999cc | #7777aa | #aaaaaa
 style: line | line | line | line | line
 yaxis: time | time | distance | distance | blocks
 type: duration | duration | number | number | number
