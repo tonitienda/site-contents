@@ -24,3 +24,15 @@ sections:
           hero-image-url: "distance-vs-time-bound.jpg"
           hero-image-author: "Aron Visuals"
           hero-image-author-url: "https://unsplash.com/@aronvisuals"
+  kyudo:
+    pages:
+      - title: Kyudo notes
+        published-at: 2026-03-09
+        description: "A log for my notes during kyudo practise or readings."
+        markdown-path: site/kyudo/notes.md
+        tags: ["kyudo", "training"]
+        metadata:
+          hero-image-url: "running-phase-0.jpg"
+          hero-image-author: "Derek Owens"
+          hero-image-author-url: "https://unsplash.com/@derekowensheart"
+    
