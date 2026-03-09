@@ -24,8 +24,8 @@ sections:
           hero-image-url: "distance-vs-time-bound.jpg"
           hero-image-author: "Aron Visuals"
           hero-image-author-url: "https://unsplash.com/@aronvisuals"
-  kyudo:
-    pages:
+   kyudo:
+     pages:
       - title: Kyudo notes
         published-at: 2026-03-09
         description: "A log for my notes during kyudo practise or readings."
