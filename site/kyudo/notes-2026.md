@@ -16,3 +16,14 @@ When preparing the written exam for this years shinsa I noticed on thing to try/
 Following that path might help me keep `mete` where it belongs (right shoulder) without overstretch.
 That could let me keep kai for a bit longer and prevent my elbow to going slightly down in hanare.
 
+## 2026-03-15
+
+I tried to follow rhe right path of mete, `hikiwake` was a bit smaller. I think rhat was good but somehow rhr arrows went down. 
+
+I kept focusing on breath and thinking more about `yunde` than `mete` and I could hold `kai` for almost 3 seconds.
+
+I need go be careful with my right elbow not falling in `hanare`. Thinking about my elbow moving towards my back helped.
+
+Next practice I will keep focusing on breathing, `yunde` and elbow behind.
+
+
