@@ -228,7 +228,7 @@ scale
   max: 5
 
 series: jog time | walk time | total distance | jog blocks
-color:  #aa7777 | #ddd0d0 | #7777aa | #666666
+color:  #336699 | #6699cc | #77bbbb | #666666
 style: bar | bar | line | marker
 stack: session | session | none | none
 yaxis: time | time | distance | blocks
@@ -290,7 +290,7 @@ data:
   2026-03-14: 9:07  | 29:32 | 4.13 | 1
   2026-03-17: 13:19 | 25:36 | 4.36 | 2
   ```
-
+Legacy Diagram:
 ```nagare
 chart
 title: Training Metrics
