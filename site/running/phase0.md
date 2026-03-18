@@ -228,7 +228,7 @@ scale
   max: 5
 
 series: jog time | walk time | total distance | jog blocks
-color:  #336699 | #6699cc | #77ffbb | #dddddd
+color:  #114477 | #336699 | #77ffff | #eeeeee
 style: bar | bar | line | marker
 stack: session | session | none | none
 yaxis: time | time | distance | blocks
