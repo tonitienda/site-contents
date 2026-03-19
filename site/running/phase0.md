@@ -198,6 +198,17 @@ Early sessions were inconsistent, including a fully walking day. Over time, sess
 
 Even though the metrics are recorded per session, I only look for patterns at the weekly level. Individual sessions don’t matter much.
 
+Notes on the chart:
+
+- First weeks were irregular. Trying to build the habit and no structure
+- At some point around Week 4 the route and structure stabilized.
+- At some point around Week 6 or 7 I fixed the structure to 33mins in total, 7 of them jogging.
+- Mid Week 8 I extended the walking time at the beginning and started doing 38 mins in total, still 7 of them jogging.
+- At Week 10 I started allowing some extra jogging blocks when I felt good. No purpose, just enjoying.
+- Around Week 12 I started controlling my breath to cap my effort doing 4-step inhale 7-step exhale (in sloped I would change to 6-step exhale)
+- During Week 13 and beginning of 14 I overdid a bit. Coming back to a calm pace half way through week 14.
+
+
 ```nagare
 chart
 title: Training Metrics
@@ -384,11 +395,3 @@ data:
   2026-03-14: 38:39 | 9:07  | 4.13  | 1.15 | 1
   2026-03-17: 38:55 | 13:19 | 4.36  | 1.79 | 2
 ```
-
-Notes on the chart:
-
-- First weeks were irregular. Trying to build the habit and no structure
-- At some point around Week 4 the route and structure stabilized.
-- At some point around Week 6 or 7 I fixed the structure to 33mins in total, 7 of them jogging.
-- Mid Week 8 I extended the walking time at the beginning and started doing 38 mins in total, still 7 of them jogging.
-- At Week 10 I started allowing some extra jogging blocks when I felt good. No purpose, just enjoying.
