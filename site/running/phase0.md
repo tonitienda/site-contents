@@ -208,7 +208,6 @@ Notes on the chart:
 - Around Week 12 I started controlling my breath to cap my effort doing 4-step inhale 7-step exhale (in sloped I would change to 6-step exhale)
 - During Week 13 and beginning of 14 I overdid a bit. Coming back to a calm pace half way through week 14.
 
-
 ```nagare
 chart
 title: Training Metrics
@@ -300,8 +299,14 @@ data:
   2026-03-13: 8:35  | 30:21 | 4.29 | 1
   2026-03-14: 9:07  | 29:32 | 4.13 | 1
   2026-03-17: 13:19 | 25:36 | 4.36 | 2
-  ```
+  2026-03-18: 13:28 | 25:35 | 4.42  | 1.85 | 2
+  2020-03-19: 13:42 | 25:01 | 4.25  | 1.78 | 2
+  2026-03-23: 13:30 | 26:41 | 4.53  | 1.86 | 2
+  2026-03-24: 13:43 | 24:28 | 4.40  | 1.87 | 2
+```
+
 Legacy Diagram:
+
 ```nagare
 chart
 title: Training Metrics
@@ -394,4 +399,8 @@ data:
   2026-03-13: 38:56 | 8:35  | 4.29  | 1.49 | 1
   2026-03-14: 38:39 | 9:07  | 4.13  | 1.15 | 1
   2026-03-17: 38:55 | 13:19 | 4.36  | 1.79 | 2
+  2026-03-18: 39:03 | 13:28 | 4.42  | 1.85 | 2
+  2020-03-19: 38:43 | 13:42 | 4.25  | 1.78 | 2
+  2026-03-23: 40:11 | 13:30 | 4.53  | 1.86 | 2
+  2026-03-24: 38:11 | 13:43 | 4.40  | 1.87 | 2
 ```
