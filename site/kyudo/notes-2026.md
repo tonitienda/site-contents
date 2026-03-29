@@ -1,4 +1,12 @@
 # Notes
+## 2026-03-29
+
+Relax `mete` and position `gake` in a soft way. No need to lock string and fingers.
+just focus on the angle of the hand and elbow. Breath and move calmly.
+Trust the gake.
+
+Doing this I could do 1-2 second `kai` and one of 4 seconds. More time in `kai` in years.
+
 ## 2026-03-06
 
 Focus on breath and posture helped me staying in `kai` for about 1s. Still very short but makes me hopeful.
