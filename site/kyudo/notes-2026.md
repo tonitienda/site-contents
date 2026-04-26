@@ -5,12 +5,13 @@
 Careful with adding too much strength or even attention to my hands. Relax.
 
 Move elbows towards my back, not sideways. 
-Keep Daisan a bit closer, keep uchiokoshi a bit lower so my shoulders are relaxed.
+Keep `daisan` a bit closer, keep `uchiokoshi` a bit lower so my shoulders are relaxed. Enter the bow during `hikiwake`.
 
 ### Images
 
-- Let the bow grab my gand when doing te no uchi
-- During hikiwake/kai do not pull or push, just stretch like when waking up
+- Let the bow grab my hand when doing `te no uchi`.
+- During `hikiwake`/`kai` do not pull or push, just stretch like when waking up
+  
 ## 2026-03-29
 
 Relax `mete` and position `gake` in a soft way. No need to lock string and fingers.
