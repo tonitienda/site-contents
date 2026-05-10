@@ -228,7 +228,7 @@ scale
   label: Distance (Kms)
   type: number
   min: 0
-  max: 5
+  max: 7
 
 scale
   id: blocks
@@ -348,7 +348,7 @@ scale
   label: Distance (Kms)
   type: number
   min: 0
-  max: 5
+  max: 7
 
 scale
   id: blocks
