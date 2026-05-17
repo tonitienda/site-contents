@@ -207,6 +207,10 @@ Notes on the chart:
 - At Week 10 I started allowing some extra jogging blocks when I felt good. No purpose, just enjoying.
 - Around Week 12 I started controlling my breath to cap my effort doing 4-step inhale 7-step exhale (in sloped I would change to 6-step exhale)
 - During Week 13 and beginning of 14 I overdid a bit. Coming back to a calm pace half way through week 14.
+- Week ?? : increasing the total time to 45 minutes.
+- Week 20: increasing jog blocks to 9 minutes each. The structure is now 12-9-2-9-13
+- Week 22: increasing jog blocks to 10 minutes each. The structure is now 11-10-2-10-12
+- Week 23: increasing jog blocks to 11 minutes each. The structure is now 10-11-2-11-11
 
 ```nagare
 chart
