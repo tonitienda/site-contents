@@ -1,5 +1,14 @@
 # Notes
 
+## 2026-06-27
+
+Holding `kai` for a bit longer in front of the `mato`.
+
+`Tenouchi` push with my whole hand. Specially with the base of the palm and not just the base of the thumb.
+Move slower and control the breath better. I felt I needed more air when I was arribing to `kai`>
+
+Think of the wings of birds and put more effort to keep the back flat. Also think of lowering my chest, keep my robs/diaphragm from flaring. Shoulder blades come out if I do not pay a lot of attention. 
+
 ## 2026-04-26
 
 Careful with adding too much strength or even attention to my hands. Relax.
